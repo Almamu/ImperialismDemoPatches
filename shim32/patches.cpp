@@ -13,7 +13,7 @@ void Imperialism_ApplyYearDemoPatches() {
 	// to
 	// - nop
 	// - jmp loc_576DB8
-	*(BYTE*)0x576929 = 0x80;
+	*(BYTE*)0x576929 = 0x90;
 	*(BYTE*)0x57692A = 0xE9;
 }
 
