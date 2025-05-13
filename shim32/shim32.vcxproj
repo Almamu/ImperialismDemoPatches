@@ -148,6 +148,7 @@
     <ClInclude Include="patches.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="overrides.cpp" />
     <ClCompile Include="patches.cpp" />
     <ClCompile Include="user32.cpp" />
   </ItemGroup>

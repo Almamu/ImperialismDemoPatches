@@ -680,7 +680,7 @@ shim LoadMenuIndirectA
 shim LoadMenuIndirectW
 shim LoadMenuW
 shim LoadRemoteFonts
-shim LoadStringA
+override LoadStringA, @16
 shim LoadStringW
 shim LockSetForegroundWindow
 shim LockWindowStation

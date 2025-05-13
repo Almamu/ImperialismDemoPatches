@@ -8,6 +8,7 @@ static BYTE originalCode[5];
 static PBYTE originalEP = 0;
 
 void Imperialism_ApplyYearDemoPatches() {
+	// message of 20 years
 	// from
 	// - jge loc_576DB8
 	// to
@@ -15,11 +16,17 @@ void Imperialism_ApplyYearDemoPatches() {
 	// - jmp loc_576DB8
 	*(BYTE*)0x576929 = 0x90;
 	*(BYTE*)0x57692A = 0xE9;
+	// world war 1 message
+	// from
+	// - jl loc_576B81
+	// to
+	// - nop
+	// - jmp loc_576B81
+	*(BYTE*)0x576AF4 = 0x90;
+	*(BYTE*)0x576AF5 = 0xE9;
 }
 
 void Imperialism_ApplyPatches() {
-	// make the code section writable so we can happyly apply our patches
-
 	Imperialism_ApplyYearDemoPatches();
 }
 
